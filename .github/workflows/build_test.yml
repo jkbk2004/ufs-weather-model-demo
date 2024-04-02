@@ -1,4 +1,4 @@
-name: Helpers
+name: RepoChecks
 on:
   pull_request:
     branches: [ "master" ]
