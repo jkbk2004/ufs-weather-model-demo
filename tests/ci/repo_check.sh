@@ -113,7 +113,7 @@ for submodule in $submodules; do
 done
 
 if [[ $flag_sync=='false' ]]; then
-    echo $flag_sync
+    echo "** ${GITHUB_WORKSPACE} **NOT** up to date"
     exit 1
 fi
 
