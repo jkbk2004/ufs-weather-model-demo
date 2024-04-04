@@ -16,7 +16,7 @@ get_shas () {
     common=$(git merge-base $base_sha @)
     echo $common $base_sha $workspace
     if [[ $common != $base_sha ]]; then
-        $comment=$comment$workspace
+        #$comment=$comment$workspace
         printf "%s\n\n" "** $workspace **NOT** up to date"
         flag_sync=false
     fi
@@ -25,7 +25,7 @@ get_shas () {
 
 flag_sync=true
 
-comment=""
+#comment=""
 
 #ownerID=$1
 
