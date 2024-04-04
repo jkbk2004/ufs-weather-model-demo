@@ -35,8 +35,8 @@ submodules="base fv3 mom6 cice ww3 stoch gocart cmeps cdeps hycom cmake ccpp_phy
 #branches[base]='develop'
 #pathes[base]=''
 
-urls[base]='https://github.com/jkbk2004/ufs-wm-gitaction'
-branches[base]='main'
+urls[base]='https://github.com/jkbk2004/ufs-weather-model-demo'
+branches[base]='master'
 pathes[base]=''
 
 urls[fv3]='https://github.com/NOAA-EMC/fv3atm'
