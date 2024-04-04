@@ -16,7 +16,6 @@ get_shas () {
     common=$(git merge-base $base_sha @)
     echo $common $base_sha $workspace
     if [[ $common != $base_sha ]]; then
-        #$comment=$comment$workspace
         printf "%s\n\n" "** $workspace **NOT** up to date"
         flag_sync=false
     fi
@@ -24,10 +23,6 @@ get_shas () {
 }
 
 flag_sync=true
-
-#comment=""
-
-#ownerID=$1
 
 declare -A urls branches pathes
 submodules="base fv3 mom6 cice ww3 stoch gocart cmeps cdeps hycom cmake ccpp_physics ccpp_framework aqm noahmp"
@@ -51,7 +46,6 @@ pathes[mom6]='MOM6-interface/MOM6'
 urls[cice]='https://github.com/NOAA-EMC/CICE'
 branches[cice]='emc/develop'
 pathes[cice]='CICE-interface/CICE'
-
 urls[ww3]='https://github.com/NOAA-EMC/WW3'
 branches[ww3]='dev/ufs-weather-model'
 pathes[ww3]='WW3'
