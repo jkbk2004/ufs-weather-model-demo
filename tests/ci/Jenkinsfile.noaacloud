@@ -37,7 +37,7 @@ pipeline {
                 build job: 'parallel-works-jenkins-client/start-cluster', parameters: [string(name: 'PW_CLUSTER_NAME', value: 'pclusternoaav2use1'), string(name: 'PW_CLUSTER_SSH_KEY', value: '~/.ssh/pw_id_rsa'), string(name: 'JAVA_VERSION', value: '11')]
             }
              else {
-                echo "${CHOICE_NODE} is NOT a Parallelworks cluster, moving on..."
+                echo "${CHOICE_NODE} is NOT a Parallelworks cluster, moving on.."
             }
        }    
     }
