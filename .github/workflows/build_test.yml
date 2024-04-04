@@ -1,7 +1,12 @@
 name: RepoChecks
 on:
+  #workflow_run:
+  #  workflows: ["Pull Request Tests"]
+  #  types:
+  #    - requested
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 env:
   app: Accept:application/vnd.github.v3+json
   base_url: $GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs
