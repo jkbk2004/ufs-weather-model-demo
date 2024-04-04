@@ -48,7 +48,7 @@ jobs:
         echo "pr_uid is $pr_uid"
         #comment="$(./repo_check.sh 2>/dev/null)"
         trap 'echo "exit-code=$?" >> "$GITHUB_OUTPUT"' EXIT
-          ./repo_check.sh
+        ./repo_check.sh
         #echo "comment is $comment"
         #if [[ -n $comment ]]; then
         #  curl -sS -X POST -H $app -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
