@@ -16,7 +16,7 @@ get_shas () {
     common=$(git merge-base $base_sha @)
     echo $common $base_sha $workspace
     if [[ $common != $base_sha ]]; then
-        $comment+=$workspace
+        #$comment+=$workspace
         printf "%s\n\n" "** $workspace **NOT** up to date"
         flag_sync=false
     fi
