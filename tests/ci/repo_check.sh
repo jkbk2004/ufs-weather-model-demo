@@ -114,7 +114,7 @@ done
 
 if [[ $flag_sync=='false' ]]; then
     echo "** ${GITHUB_WORKSPACE} **NOT** up to date"
-    exit 0
+    exit 1
 fi
 
 echo "** ${GITHUB_WORKSPACE} up to date **"
