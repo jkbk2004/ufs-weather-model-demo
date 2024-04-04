@@ -26,7 +26,7 @@ flag_sync=true
 
 comment="* "
 
-ownerID=$1
+#ownerID=$1
 
 declare -A urls branches pathes
 submodules="base fv3 mom6 cice ww3 stoch gocart cmeps cdeps hycom cmake ccpp_physics ccpp_framework aqm noahmp"
