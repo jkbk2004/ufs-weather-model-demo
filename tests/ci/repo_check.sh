@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+#set -eu
 
 get_shas () {
     cwd=$(pwd)
@@ -111,6 +111,8 @@ for submodule in $submodules; do
     gitapi=$(echo "$url" | sed 's/github.com/api.github.com\/repos/g')'/branches/'$branch
     get_shas $url $gitapi $branch $workspace
 done
+
+echo $flag_sync
 
 if [[ $flag_sync=='true' ]]; then
     exit 0
