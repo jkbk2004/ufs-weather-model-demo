@@ -33,6 +33,7 @@ jobs:
     steps:
     - name: Check up-to-dateness and post comment
       run: |
+        trap 'echo "exit-code=$?" >> "$GITHUB_OUTPUT"' EXIT
         head_sha=${{ github.event.pull_request.head.sha }}
         head_brc=${{ github.event.pull_request.head.ref }}
         head_url=${{ github.event.pull_request.head.repo.html_url }}
@@ -47,7 +48,7 @@ jobs:
         pr_uid=${{ github.event.pull_request.head.repo.owner.login }}
         echo "pr_uid is $pr_uid"
         #comment="$(./repo_check.sh 2>/dev/null)"
-        trap 'echo "exit-code=$?" >> "$GITHUB_OUTPUT"' EXIT
+        #trap 'echo "exit-code=$?" >> "$GITHUB_OUTPUT"' EXIT
         ./repo_check.sh
         #echo "comment is $comment"
         #if [[ -n $comment ]]; then
