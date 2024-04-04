@@ -1,4 +1,4 @@
-name: RepoChecks
+name: Repo Checks
 on:
   #workflow_run:
   #  workflows: ["Pull Request Tests"]
