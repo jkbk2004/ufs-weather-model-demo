@@ -25,7 +25,7 @@ get_shas () {
 
 flag_sync=true
 
-comment=""
+#comment=""
 
 #ownerID=$1
 
