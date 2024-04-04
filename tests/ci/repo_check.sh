@@ -112,10 +112,9 @@ for submodule in $submodules; do
     get_shas $url $gitapi $branch $workspace
 done
 
-echo $flag_sync
-
-if [[ $flag_sync=='true' ]]; then
-    exit 0
-else
+if [[ $flag_sync=='false' ]]; then
+    echo $flag_sync
     exit 1
 fi
+
+exit 0
